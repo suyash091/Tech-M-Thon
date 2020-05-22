@@ -15,7 +15,10 @@ Download this repository, place your code inside, Update solution.txt with your 
 
 Note:
 **Solving more than 2 Use Cases, you can straightaway proceed to next round.
+
 **For 2 use cases or less, Proceeding to next round is based on code review.
+
 **Teams are free to interpret the use cases based on their skillset. for example, you can submit a jupyter notebook with applied machine learning, Deep Learning or Data Visualisations, you can also submit a full stack based solutions or you can also submit end to end solutions based on your team's skill employing various technologies such as Cloud Deployment or API integration, Full Stack, Data Science, app development etc.
+
 
 All The best!
