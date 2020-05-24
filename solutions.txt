@@ -1,7 +1,25 @@
-Team Name:
+Team Name: Team VN
 Use Case 1: Demo File Name in repo if solved otherwise Not Applicable 
-Use Case 2: Demo File Name in repo if solved otherwise Not Applicable 
-Use Case 3: Demo File Name in repo if solved otherwise Not Applicable 
+Use Case 2:
+          Login_capture.py
+          app.py
+          
+          ScreenShots/2.PNG
+          ScreenShots/3.PNG
+          ScreenShots/4.PNG
+          ScreenShots/5.PNG
+          ScreenShots/6.PNG
+          ScreenShots/7.PNG
+  
+Use Case 3:
+          create_face_data.py
+          face_data_recognition.py
+          face_data_training.py
+          
+          ScreenShots/8.PNG
+          ScreenShots/9.PNG
+          
+          
 Use Case 4: Demo File Name in repo if solved otherwise Not Applicable 
 Use Case 5: Demo File Name in repo if solved otherwise Not Applicable
 
