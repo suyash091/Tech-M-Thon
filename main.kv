@@ -1,0 +1,283 @@
+#:import Window kivy.core.window.Window
+#:set color_shadow [0, 0, 0, .2980392156862745]
+#:import MDTextField kivymd.textfields.MDTextField
+
+
+<KitchenSinkTextFieldRound@MDTextFieldRound>
+    size_hint_x: None
+    normal_color: color_shadow
+    active_color: color_shadow
+
+NavigationLayout:
+    MDNavigationDrawer:
+
+        NavigationDrawerSubheader:
+            text: "Main Menu"
+        NavigationDrawerIconButton:
+            icon: 'login-variant'
+            text: 'Use Case 2'
+            on_release:
+                screen_manager.current = "screen2"
+        NavigationDrawerIconButton:
+            icon: 'login-variant'
+            text: 'Use Case 3'
+            on_release:
+                screen_manager.current = "screen6"
+    ScreenManager:
+        id: screen_manager
+        Screen:
+            name: "screen1"
+            MDLabel:
+                text: "Log In"
+                halign: "center"
+                size_hint_y: None
+            Button:
+                text: "Premier Charity Trust"
+                on_release:
+                    app.root.toggle_nav_drawer()
+
+
+        Screen:
+            name: "screen2"
+            MDLabel:
+                text: "Scan Your ID Card To Log In"
+                halign: "center"
+                size_hint_y: None
+            MDFloatingActionButton:
+                icon: "camera-party-mode"
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .5, "center_y": .5}
+                on_release:
+                    app.show_popup("You are login for first time")
+                    screen_manager.current = "screen3"
+
+        Screen:
+            name: "screen3"
+            MDTextField:
+                hint_text: "Enter PCT Id"
+                required: True
+                max_text_length: 10
+                line_color_normal: 1,1,1,1
+                color_mode: 'accent'
+                pos_hint: {"center_x": .6, "center_y": .7}
+            MDTextField:
+                hint_text: "Lab ID"
+                required: True
+                pos_hint: {"center_x": .6, "center_y": .5}
+
+            MDFloatingActionButton:
+                icon: "login"
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .2, "center_y": .1}
+                on_release:
+
+                    screen_manager.current = "screen4"
+
+        Screen:
+            name: "screen4"
+            MDLabel:
+                text: "Enter Reason Infront of The Lab You Want To Access"
+                halign: "center"
+                size_hint_y: None
+                text_color: 0, 0, 1, 1
+
+
+            MDFloatingActionButton:
+                icon: "numeric-1-box"
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .3, "center_y": .8}
+                on_release:
+
+                    screen_manager.current = "screen5"
+
+            MDFloatingActionButton:
+                icon: "numeric-2-box"
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .3, "center_y": .7}
+                on_release:
+
+                    screen_manager.current = "screen5"
+            MDFloatingActionButton:
+                icon: "numeric-3-box"
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .3, "center_y": .6}
+                on_release:
+
+                    screen_manager.current = "screen5"
+            MDFloatingActionButton:
+                icon: "numeric-4-box"
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .3, "center_y": .5}
+                on_release:
+
+                    screen_manager.current = "screen5"
+
+            MDTextField:
+                hint_text: "Enter Reason"
+
+                max_text_length: 10
+
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .8}
+            MDTextField:
+                hint_text: "Enter Reason"
+
+                max_text_length: 10
+
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .7}
+            MDTextField:
+                hint_text: "Enter Reason"
+
+                max_text_length: 10
+
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .6}
+            MDTextField:
+                hint_text: "Enter Reason"
+
+                max_text_length: 10
+
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .5}
+
+        Screen:
+            name: "screen5"
+            MDFloatingActionButton:
+                icon: "biohazard"
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .3, "center_y": .9}
+            MDTextField:
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .9}
+            MDTextField:
+                hint_text: "Reason 1"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .8}
+            MDTextField:
+                hint_text: "Reason 2"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .7}
+            MDTextField:
+                hint_text: "Reason 3"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .6}
+            MDTextField:
+                hint_text: "Reason 4"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .5}
+
+            MDFloatingActionButton:
+                icon: "biohazard"
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .3, "center_y": .4}
+
+            MDTextField:
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .4}
+            MDTextField:
+                hint_text: "LAB 2"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .3}
+            MDTextField:
+                hint_text: "LAB 3"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .2}
+            MDTextField:
+                hint_text: "LAB 4"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .1}
+
+
+        Screen:
+            name: "screen6"
+            MDLabel:
+                text: " Take Image Of The Patient"
+                halign: "center"
+                size_hint_y: None
+                text_color: 0, 0, 1, 1
+            MDFloatingActionButton:
+                icon: "camera-party-mode"
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .5, "center_y": .5}
+                on_release:
+                    app.show_popup("Enter New Paitent Details")
+                    screen_manager.current = "screen8"
+
+        Screen:
+            name: "screen7"
+
+            MDFloatingActionButton:
+                icon: "human-male"
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .1, "center_y": .9}
+
+            MDTextField:
+                hint_text: "Paitent ID"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .7, "center_y": .9}
+
+            MDTextField:
+                #hint_text: "Hospital 1 (current hospital) visited last on May 3, 2020"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .7, "center_y": .8}
+
+            MDTextField:
+                hint_text: "Ailment 1"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .7, "center_y": .7}
+            MDTextField:
+                hint_text: "Ailment 2"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .7, "center_y": .6}
+            MDTextField:
+                hint_text: "Ailment 3"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .7, "center_y": .5}
+
+
+
+            MDTextField:
+                color_mode: 'accent'
+                pos_hint: {"center_x": .7, "center_y": .4}
+            MDTextField:
+                hint_text: "Hospital 2"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .7, "center_y": .3}
+            MDTextField:
+                hint_text: "Hospital 3"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .7, "center_y": .2}
+            MDTextField:
+                hint_text: "Hospital 4"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .7, "center_y": .1}
+
+
+        Screen:
+            name: "screen8"
+            MDTextField:
+                hint_text: "Paitent ID"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .6, "center_y": .9}
+
+            MDTextField:
+                hint_text: "Health Center ID"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .6, "center_y": .7}
+
+            MDTextField:
+                hint_text: "Reciptionist ID"
+                color_mode: 'accent'
+                pos_hint: {"center_x": .6, "center_y": .5}
+
+
+            MDFloatingActionButton:
+                icon: "human-male"
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .3, "center_y": .1}
+
+            MDTextField:
+
+                color_mode: 'accent'
+                pos_hint: {"center_x": .9, "center_y": .1}
