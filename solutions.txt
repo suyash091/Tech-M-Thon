@@ -1,11 +1,13 @@
-Team Name:
-Use Case 1: Demo File Name in repo if solved otherwise Not Applicable 
-Use Case 2: Demo File Name in repo if solved otherwise Not Applicable 
+Team Name: TLE
+Use Case 1: case1.zip
+            Screeshots 2: (1,2,3,4,5,6,7) 
+
+Use Case 2: Case2final.zip 
+            Screenshots: (1,2,3,4,5,6,7,8,9,10)
+            
 Use Case 3: Demo File Name in repo if solved otherwise Not Applicable 
 Use Case 4: Demo File Name in repo if solved otherwise Not Applicable 
 Use Case 5: Demo File Name in repo if solved otherwise Not Applicable
-
-Screenshots of live demo (If Any): Screenshot1, Screenshot2, Screenshot3...
 
 Note: 
 **File mentioned in screenshots of Use Cases should be inside this repository only.
