@@ -1,0 +1,8 @@
+#In this project we have find the location of certain places:
+#Location is defined in terms of latitude and Longitude.
+#We have located health centres and plotted the location on map.
+#Double clicking zoom in and out feature work.
+#In Backhand we have written certain algorithm to find no of student ,no of teachers..etc.
+#we have used the location marker to point out the locations.
+#By hovering over the location marker, we can see sum of students.
+#The algorithm is efficint and convinient.
